@@ -1,0 +1,89 @@
+/* globais */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #2aa5a5;
+    font-family: 'Montserrat', sem serifa;
+}
+/* carousel */
+.container{
+   min-height: 100vh;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.testimonial{
+    position: relative;
+    max-width: 640px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 0.65rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden;
+}
+.slide blockquote{
+    text-align: left;
+    padding: 3rem;
+    border-radius: 0.4rem;
+    cursor: grab;
+}
+.slide blockquote p span{
+    position: absolute;
+    top: -3.6rem;
+    left: 0;
+    margin-bottom: 1rem;
+}
+
+.slide blockquote p{
+    position: relative;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: justify;
+    line-height: 150%;
+    margin-top: 1.6rem;
+    margin-bottom: 2rem;
+}
+.slide cite{
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 2.8rem;
+    color: #E8590C;
+}
+.slide cite img{
+    width: 4.2rem;
+    height: 4.2rem;
+    object-fit: cover;
+    clip-path: circle();
+    margin-right: 1.6rem;
+}
+/* custom styles */
+#nav-btn{
+    transform: translateY(30px);
+}
+#nav-btn::after,
+#nav-btn::before{
+    font-size: 28px;
+    font-weight: bold;
+    color: #2aa5a5;
+}
+span.swiper-pagination-bullet-active{
+    background-color: #E8590C;
+}
+/* media queries */
+@media screen and (max-width:768px) {
+    .testimonial{
+        width: 95%;
+        padding: 5px;
+    }
+    #nav-btn{
+        display: none;
+    }  
+}
